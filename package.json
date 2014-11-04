@@ -1,0 +1,19 @@
+{
+  "name": "defer-image-loading",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watchify ./main.js -o ./bundle.js",
+    "build": "browserify ./main.js -o ./bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "watchify": "^2.1.1"
+  },
+  "dependencies": {
+    "critical": "^0.4.0"
+  }
+}
