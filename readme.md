@@ -5,23 +5,17 @@ It's based on this blog post: http://ponyfoo.com/articles/critical-path-performa
 
 ## Content
 
-* [Install](#install)
-* [Complie browserify](#watch)
-* [Run](#run)
+* [Setup](#setup)
 
-## Install
+## Setup
 
     npm install
-
-## Inline CSS
-
     npm run inline
 
-## Compile browserify
-
-    npm run build
-
-## Run
+The last command creates 2 new files: inline.css and index.html
 
     open index.html in the browser
+
+notice that the inline.css was not injected into index.html
+
 
