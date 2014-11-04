@@ -3,19 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <title>Extract & Inline Critical-path CSS in HTML pages</title>
-  <noscript>
-    <link href="main.css" rel="stylesheet">
-  </noscript>
 </head>
 
 <body>
-  <!-- if scripting is turned off in the browser -->
-  <noscript>
-    <style>
-      .js-only { display: none !important; }
-    </style>
-  </noscript>
-
   <div id='main-image'>
     <p>This image is the only one on the critical path</p>
     <img src='https://lh4.googleusercontent.com/-v48MlSdUwUs/AAAAAAAAAAI/AAAAAAAADbU/PSP1gI6sYyM/photo.jpg' />
@@ -23,24 +13,15 @@
 
   <div id='defered-images'>
     <p>The images below the are being loaded after DOMContentLoaded. Therefor speeding up the loading of the main content of the site.</p>
-    <img data-src='http://findicons.com/files/icons/1243/hello_kitty/128/kitty_2.png' class='js-only2' />
-    <noscript>
-      <img src='http://findicons.com/files/icons/1243/hello_kitty/128/kitty_2.png' />
-    </noscript>
-    <img data-src='https://lh4.googleusercontent.com/-KWaUza78REE/AAAAAAAAAAI/AAAAAAAAACQ/OhfI_pezjwA/s120-c/photo.jpg' class='js-only2' />
-    <noscript>
-      <img src='https://lh4.googleusercontent.com/-KWaUza78REE/AAAAAAAAAAI/AAAAAAAAACQ/OhfI_pezjwA/s120-c/photo.jpg' />
-    </noscript>
-    <img data-src='http://mx.cdn01.mundotkm.com/2014/08/Hellokittyy.png' class='js-only2' />
-    <noscript>
-      <img src='http://mx.cdn01.mundotkm.com/2014/08/Hellokittyy.png' />
-    </noscript>
+    <img src='http://findicons.com/files/icons/1243/hello_kitty/128/kitty_2.png' />
+    <img src='https://lh4.googleusercontent.com/-KWaUza78REE/AAAAAAAAAAI/AAAAAAAAACQ/OhfI_pezjwA/s120-c/photo.jpg' />
+    <img src='http://mx.cdn01.mundotkm.com/2014/08/Hellokittyy.png' />
   </div>
 
   <div id='footer'>
     this is a footer
   </div>
 
-  <script type="text/javascript" src="init.js"></script>
+  <!-- <script type="text/javascript" src="init.js"></script> -->
 </body>
 </html>
