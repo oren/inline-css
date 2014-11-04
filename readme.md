@@ -13,6 +13,10 @@ It's based on this blog post: http://ponyfoo.com/articles/critical-path-performa
 
     npm install
 
+## Inline CSS
+
+    npm run inline
+
 ## Compile browserify
 
     npm run build
