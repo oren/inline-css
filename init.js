@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
   var $$ = document.querySelectorAll.bind(document);
 
-  unwrapImages();
+  getImages();
   injectJS();
+  injectCSS();
 
-  function unwrapImages () {
+  function getImages () {
     var divs = $$('#defered-images img[data-src]');
     // borrowing forEach from Array since divs is not an array
     [].forEach.call(divs, unwrap);
@@ -19,5 +20,19 @@ document.addEventListener('DOMContentLoaded', function() {
     var elem = document.createElement('script');
     elem.src = './bundle.js';
     document.body.appendChild(elem);
+  }
+
+  function injectCSS() {
+    var elem = document.createElement('link');
+    var head = document.getElementsByTagName('head')[0];
+
+    elem.rel = 'stylesheet';
+    elem.href = './main.css';
+    elem.media = 'only x';
+    head.appendChild(elem);
+
+    setTimeout(function () {
+      elem.media = 'all';
+    });
   }
 });

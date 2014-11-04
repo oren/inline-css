@@ -7,7 +7,7 @@ critical.generateInline({
     base: './',
 
     // HTML source
-    src: 'index.html',
+    src: 'not-inlined-index.html',
 
     // Your CSS Files (optional)
     css: ['./main.css'],
@@ -19,10 +19,10 @@ critical.generateInline({
     height: 480,
 
     // Target for final HTML output
-    htmlTarget: 'index-critical.html',
+    htmlTarget: 'index.html',
 
     // Target for generated critical-path CSS (which we inline)
-    styleTarget: 'generated-main.css',
+    styleTarget: 'inlined.css',
 
     // Minify critical-path CSS when inlining
     minify: true,
